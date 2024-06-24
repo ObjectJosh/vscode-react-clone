@@ -9,7 +9,7 @@ app.allowRendererProcessReuse = true;
 const isDevelopment = process.env.NODE_ENV !== 'production';
 const windowsById: Map<number, Electron.BrowserWindow | null> = new Map();
 
-const devEntry = `http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`;
+const devEntry = `http://localhost:9080`;
 const prodEntry = url.format({
   protocol: 'file',
   pathname: path.join(__dirname, '../renderer/index.html'),
